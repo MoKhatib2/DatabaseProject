@@ -27,6 +27,8 @@ namespace WebApp
             conn.Open();
             proc.ExecuteNonQuery();
             conn.Close();
+            Response.Write("Club added successfully");
+
         }
 
         protected void DeleteClubBUTTON_Click(object sender, EventArgs e)
@@ -39,6 +41,8 @@ namespace WebApp
             conn.Open();
             proc.ExecuteNonQuery();
             conn.Close();
+            Response.Write("Club deleted successfully, if it was available");
+
         }
 
         protected void AddStadiumButton_Click(object sender, EventArgs e)
@@ -59,6 +63,8 @@ namespace WebApp
             conn.Open();
             proc.ExecuteNonQuery();
             conn.Close();
+            Response.Write("Stadium added successfully");
+
         }
 
         protected void DeleteStadiumButton_Click(object sender, EventArgs e)
@@ -71,6 +77,8 @@ namespace WebApp
             conn.Open();
             proc.ExecuteNonQuery();
             conn.Close();
+            Response.Write("Stadium deleted successfully, if it was available");
+
         }
 
         protected void BlockFanButton_Click(object sender, EventArgs e)
@@ -89,6 +97,7 @@ namespace WebApp
             conn.Open();
             proc.ExecuteNonQuery();
             conn.Close();
+            Response.Write("Fan blocked successfully");
         }
     }
 }

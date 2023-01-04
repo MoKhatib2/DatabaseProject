@@ -8,7 +8,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
+            <center><asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="Larger" Text="Welcome System Admin!"></asp:Label></center>        
         <div>
+            <br />
             <asp:Label ID="AddClubLabel" runat="server" Text="Add Club" Font-Bold="True"></asp:Label>
             <br />
             Club Name:&nbsp;&nbsp;&nbsp;
