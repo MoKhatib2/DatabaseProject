@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a991fc6c8d654798b45d85bd948e90b1" Name="Diagram1">
+        <EntityTypeShape EntityType="MyModel.Club" Width="1.5" PointX="5.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyModel.ClubRepresentative" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyModel.Fan" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyModel.HostRequest" Width="1.5" PointX="9.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyModel.Match" Width="1.5" PointX="7.5" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyModel.SportsAssManager" Width="1.5" PointX="3" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyModel.Stadium" Width="1.5" PointX="5.25" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyModel.StadiumManager" Width="1.5" PointX="3" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyModel.SystemAdmin" Width="1.5" PointX="3" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyModel.SystemUser" Width="1.5" PointX="0.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyModel.Ticket" Width="1.5" PointX="9.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyModel.allFan" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="MyModel.fk_ClubCR" ManuallyRouted="false" />
+        <AssociationConnector Association="MyModel.fk_guestClub" ManuallyRouted="false" />
+        <AssociationConnector Association="MyModel.fk_hostClub" ManuallyRouted="false" />
+        <AssociationConnector Association="MyModel.fk_CR" ManuallyRouted="false" />
+        <AssociationConnector Association="MyModel.fk_hostRequestCR" ManuallyRouted="false" />
+        <AssociationConnector Association="MyModel.FK__Ticket__fanID__6EF57B66" ManuallyRouted="false" />
+        <AssociationConnector Association="MyModel.fk_F" ManuallyRouted="false" />
+        <AssociationConnector Association="MyModel.fk_hostRequestMatch" ManuallyRouted="false" />
+        <AssociationConnector Association="MyModel.fk_hostRequestSM" ManuallyRouted="false" />
+        <AssociationConnector Association="MyModel.FK__Ticket__matchID__6FE99F9F" ManuallyRouted="false" />
+        <AssociationConnector Association="MyModel.fk_Stad" ManuallyRouted="false" />
+        <AssociationConnector Association="MyModel.fk_SAM" ManuallyRouted="false" />
+        <AssociationConnector Association="MyModel.fk_StadM" ManuallyRouted="false" />
+        <AssociationConnector Association="MyModel.fk_SM" ManuallyRouted="false" />
+        <AssociationConnector Association="MyModel.fk_SA" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

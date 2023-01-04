@@ -17,5 +17,10 @@ namespace WebApp
         {
 
         }
+
+        protected void BackBUTTON_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("MainRegister.aspx");
+        }
     }
 }

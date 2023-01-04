@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SAM_HomePage.aspx.cs" Inherits="WebApp.SAM_HomePage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CR_HomePage.aspx.cs" Inherits="WebApp.CR_HomePage" %>
 
 <!DOCTYPE html>
 
@@ -10,7 +10,6 @@
     <form id="form1" runat="server">
         <div>
         </div>
-        <asp:Label ID="Label1" runat="server" Text="lol"></asp:Label>
     </form>
 </body>
 </html>

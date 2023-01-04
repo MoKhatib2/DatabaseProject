@@ -14,16 +14,14 @@ namespace WebApp
 
         }
 
-        protected void TextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         protected void SAM_RegisterBUTTON_Click(object sender, EventArgs e)
         {
 
         }
 
-      
+        protected void BackBUTTON_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("MainRegister.aspx");
+        }
     }
 }

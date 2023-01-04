@@ -10,8 +10,13 @@
     <form id="form1" runat="server">
         <div>
         <div>
+            <asp:Label ID="Title" runat="server" Text="Fan
+                " style="font-weight: 700; font-size: large"></asp:Label>
+            <br />
+            <br />
             Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
             <asp:TextBox ID="Name" runat="server"></asp:TextBox>
+            <br />
             <br />
         </div>
         Username:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="Username" runat="server"></asp:TextBox>
@@ -30,6 +35,9 @@
             Address:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="Address" runat="server"></asp:TextBox>
         <p>
             <asp:Button ID="Fan_RegisterBUTTON" runat="server" Text="Register" OnClick="Fan_RegisterBUTTON_Click" style="height: 29px" />
+        </p>
+            <p>
+                <asp:Button ID="BackBUTTON" runat="server" style="margin-right: 0px" Text="Back" Width="90px" OnClick="BackBUTTON_Click" />
         </p>
             <p>
                 &nbsp;</p>

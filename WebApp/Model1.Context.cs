@@ -15,10 +15,10 @@ namespace WebApp
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class ms2Entities2 : DbContext
+    public partial class MyEntities : DbContext
     {
-        public ms2Entities2()
-            : base("name=ms2Entities2")
+        public MyEntities()
+            : base("name=MyEntities")
         {
         }
     
@@ -40,64 +40,64 @@ namespace WebApp
         public virtual DbSet<Ticket> Tickets { get; set; }
         public virtual DbSet<allFan> allFans { get; set; }
     
-        [DbFunction("ms2Entities2", "allPendingRequests")]
+        [DbFunction("MyEntities", "allPendingRequests")]
         public virtual IQueryable<allPendingRequests_Result> allPendingRequests(string stadMUsername)
         {
             var stadMUsernameParameter = stadMUsername != null ?
                 new ObjectParameter("stadMUsername", stadMUsername) :
                 new ObjectParameter("stadMUsername", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<allPendingRequests_Result>("[ms2Entities2].[allPendingRequests](@stadMUsername)", stadMUsernameParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<allPendingRequests_Result>("[MyEntities].[allPendingRequests](@stadMUsername)", stadMUsernameParameter);
         }
     
-        [DbFunction("ms2Entities2", "allUnassignedMatches")]
+        [DbFunction("MyEntities", "allUnassignedMatches")]
         public virtual IQueryable<allUnassignedMatches_Result> allUnassignedMatches(string hostName)
         {
             var hostNameParameter = hostName != null ?
                 new ObjectParameter("hostName", hostName) :
                 new ObjectParameter("hostName", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<allUnassignedMatches_Result>("[ms2Entities2].[allUnassignedMatches](@hostName)", hostNameParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<allUnassignedMatches_Result>("[MyEntities].[allUnassignedMatches](@hostName)", hostNameParameter);
         }
     
-        [DbFunction("ms2Entities2", "availableMatchesToAttend")]
+        [DbFunction("MyEntities", "availableMatchesToAttend")]
         public virtual IQueryable<availableMatchesToAttend_Result> availableMatchesToAttend(Nullable<System.DateTime> startTime)
         {
             var startTimeParameter = startTime.HasValue ?
                 new ObjectParameter("StartTime", startTime) :
                 new ObjectParameter("StartTime", typeof(System.DateTime));
     
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<availableMatchesToAttend_Result>("[ms2Entities2].[availableMatchesToAttend](@StartTime)", startTimeParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<availableMatchesToAttend_Result>("[MyEntities].[availableMatchesToAttend](@StartTime)", startTimeParameter);
         }
     
-        [DbFunction("ms2Entities2", "stadiumsNeverPlayedOn")]
+        [DbFunction("MyEntities", "stadiumsNeverPlayedOn")]
         public virtual IQueryable<stadiumsNeverPlayedOn_Result> stadiumsNeverPlayedOn(string clubName)
         {
             var clubNameParameter = clubName != null ?
                 new ObjectParameter("clubName", clubName) :
                 new ObjectParameter("clubName", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<stadiumsNeverPlayedOn_Result>("[ms2Entities2].[stadiumsNeverPlayedOn](@clubName)", clubNameParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<stadiumsNeverPlayedOn_Result>("[MyEntities].[stadiumsNeverPlayedOn](@clubName)", clubNameParameter);
         }
     
-        [DbFunction("ms2Entities2", "upcomingMatchesOfClub")]
+        [DbFunction("MyEntities", "upcomingMatchesOfClub")]
         public virtual IQueryable<upcomingMatchesOfClub_Result> upcomingMatchesOfClub(string clubName)
         {
             var clubNameParameter = clubName != null ?
                 new ObjectParameter("clubName", clubName) :
                 new ObjectParameter("clubName", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<upcomingMatchesOfClub_Result>("[ms2Entities2].[upcomingMatchesOfClub](@clubName)", clubNameParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<upcomingMatchesOfClub_Result>("[MyEntities].[upcomingMatchesOfClub](@clubName)", clubNameParameter);
         }
     
-        [DbFunction("ms2Entities2", "viewAvailableStadiumsOn")]
+        [DbFunction("MyEntities", "viewAvailableStadiumsOn")]
         public virtual IQueryable<viewAvailableStadiumsOn_Result> viewAvailableStadiumsOn(Nullable<System.DateTime> date)
         {
             var dateParameter = date.HasValue ?
                 new ObjectParameter("date", date) :
                 new ObjectParameter("date", typeof(System.DateTime));
     
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<viewAvailableStadiumsOn_Result>("[ms2Entities2].[viewAvailableStadiumsOn](@date)", dateParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<viewAvailableStadiumsOn_Result>("[MyEntities].[viewAvailableStadiumsOn](@date)", dateParameter);
         }
     
         public virtual int acceptRequest(string stadMUsername, string hostClub, string guestClub, Nullable<System.DateTime> startTime)
