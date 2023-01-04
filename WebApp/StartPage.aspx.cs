@@ -42,14 +42,15 @@ namespace WebApp
                 {
                     loggedin = 1;
                     Session["User"] = Username;
-                   
+
+                    break;
                 } 
             }
 
             if(loggedin== 0) { Response.Write("Wrong username or password! please try again"); }
             else
             {
-                Response.Write("Loggd in");
+                Response.Write("Logged in");
 
                 DataTable CR_dt = new DataTable();
                 SqlDataAdapter CR_da = new SqlDataAdapter("select*from SportsAssManager where username = '" + username + "'", conn);
