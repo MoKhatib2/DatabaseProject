@@ -27,7 +27,7 @@
             <asp:Button ID="SM_RegisterBUTTON" runat="server" Text="Register" OnClick="SM_RegisterBUTTON_Click" Height="33px" Width="91px" />
         &nbsp;</p>
             <p>
-                <asp:Button ID="BackBUTTON" runat="server" Text="Button" Width="90px" OnClick="BackBUTTON_Click" />
+                <asp:Button ID="BackBUTTON" runat="server" Text="Back" Width="90px" OnClick="BackBUTTON_Click" />
         </p>
         </div>
     </form>

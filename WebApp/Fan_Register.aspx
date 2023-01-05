@@ -23,7 +23,7 @@
         <p>
             Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="Password" runat="server"></asp:TextBox>
         </p>
-            National ID Number:&nbsp;&nbsp; <asp:TextBox ID="National_ID_Number" runat="server"></asp:TextBox>
+            National ID Number:&nbsp;&nbsp; <asp:TextBox ID="National_ID_Number" runat="server" ></asp:TextBox>
             <br />
             <br />
             Phone Number:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="Phone_Number" runat="server"></asp:TextBox>

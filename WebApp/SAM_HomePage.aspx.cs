@@ -59,7 +59,16 @@ namespace WebApp
 
         protected void addMatchButton_Click(object sender, EventArgs e)
         {
+            SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["WebApp"].ToString());
+            SqlCommand proc = new SqlCommand("addNewMatch", conn);
+            proc.CommandType = System.Data.CommandType.StoredProcedure;
+            proc.Parameters.Add(new SqlParameter("@clubName", addMatchHostClubTextBox.Text));
+            proc.Parameters.Add(new SqlParameter("@clubLocation", AddCLub_Location.Text));
 
+            conn.Open();
+            proc.ExecuteNonQuery();
+            conn.Close();
+            Response.Write("Club added successfully");
         }
 
         protected void deleteMatchButton_Click(object sender, EventArgs e)

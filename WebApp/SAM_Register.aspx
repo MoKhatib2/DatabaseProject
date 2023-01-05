@@ -21,7 +21,7 @@
         </p>
         <p>
             Password:&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="Passsword" runat="server"  Width="163px"></asp:TextBox>
+            <asp:TextBox ID="Password" runat="server"  Width="163px"></asp:TextBox>
         </p>
 &nbsp;<asp:Button ID="SAM_RegisterBUTTON" runat="server" Text="Register" Width="105px" OnClick="SAM_RegisterBUTTON_Click" />
         <br />

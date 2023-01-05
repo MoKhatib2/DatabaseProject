@@ -30,26 +30,71 @@ namespace WebApp
             String clubName = ClubName.Text;
 
             bool usernameTaken = false;
+            bool clubFound = false;
+            bool clubAvailable = false;
+
             SqlDataAdapter da = new SqlDataAdapter("select*from SystemUser", conn);
             da.Fill(dt);
             for(int i = 0; i<dt.Rows.Count; i++)
             {
                 dr = dt.Rows[i];
-                if (dr[2].Equals(username)) 
+                if (dr[0].Equals(username)) 
                 {
                     Response.Write("username already taken!");
                     usernameTaken = true;
                 }
             }
 
-            if (!usernameTaken)
+            DataTable dt1 = new DataTable();
+            SqlDataAdapter da1 = new SqlDataAdapter("select*from Club", conn);
+            da1.Fill(dt1);
+            for (int i = 0; i < dt1.Rows.Count; i++)
+            {
+                dr = dt1.Rows[i];
+                if (dr[1].Equals(clubName))
+                {
+                    clubFound = true;
+                }
+            }
+
+            if (clubFound) 
+            {
+                DataTable dt2 = new DataTable();
+                SqlDataAdapter da2 = new SqlDataAdapter("select*from Club where cname = '" + clubName +"'", conn);
+                da2.Fill(dt2);
+                for (int i = 0; i < dt2.Rows.Count; i++)
+                {
+                    dr = dt2.Rows[i];
+                    if (dr[3] == null)
+                    {
+                        clubAvailable = true;
+                    }
+                }
+                if (!clubAvailable) { Response.Write("Club already has a representative"); }
+            }
+            else
+            {
+                Response.Write("Club not found");
+            }
+
+       
+
+            if (!usernameTaken && clubAvailable)
             {
                 SqlCommand addCr = new SqlCommand("addRepresentative", conn);
                 addCr.CommandType = CommandType.StoredProcedure;
 
-                conn.Open();
-                SqlDataReader rdr = addCr.ExecuteReader(CommandBehavior.CloseConnection);
+                addCr.Parameters.Add(new SqlParameter("@username", username));
+                addCr.Parameters.Add(new SqlParameter("@password", pass));
+                addCr.Parameters.Add(new SqlParameter("@name", name));
+                addCr.Parameters.Add(new SqlParameter("@clubName", clubName));
 
+                conn.Open();
+                addCr.ExecuteNonQuery();
+                conn.Close();
+
+                Response.Write("Account Created");
+        
             }
 
         }
