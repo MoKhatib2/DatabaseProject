@@ -15,11 +15,12 @@ namespace WebApp
     {
         private void fillUITable(Table uitable, DataTable dataTable)
         {
+            uitable.Rows.Add(new TableRow());
+
             for (int j = 0; j < dataTable.Columns.Count; j++)
             {
                 TableHeaderCell headerCell = new TableHeaderCell();
                 headerCell.Text = dataTable.Columns[j].ColumnName;
-                uitable.Rows.Add(new TableRow());
                 uitable.Rows[0].Cells.Add(headerCell);
                 uitable.Rows[0].Cells[j].BorderStyle = BorderStyle.Solid;
             }
@@ -62,18 +63,31 @@ namespace WebApp
             SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["WebApp"].ToString());
             SqlCommand proc = new SqlCommand("addNewMatch", conn);
             proc.CommandType = System.Data.CommandType.StoredProcedure;
-            proc.Parameters.Add(new SqlParameter("@clubName", addMatchHostClubTextBox.Text));
-            proc.Parameters.Add(new SqlParameter("@clubLocation", AddCLub_Location.Text));
+            proc.Parameters.Add(new SqlParameter("@host_club", addMatchHostClubTextBox.Text));
+            proc.Parameters.Add(new SqlParameter("@guest_club", addMatchGuestClubTextBox.Text));
+            proc.Parameters.Add(new SqlParameter("@start_time", addMatchStartTimeTextBox.Text));
+            proc.Parameters.Add(new SqlParameter("@end_time", addMatchEndTimeTextBox.Text));
 
             conn.Open();
             proc.ExecuteNonQuery();
             conn.Close();
-            Response.Write("Club added successfully");
+            Response.Write("Match added successfully");
         }
 
         protected void deleteMatchButton_Click(object sender, EventArgs e)
         {
+            SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["WebApp"].ToString());
+            SqlCommand proc = new SqlCommand("otherDeleteMatch", conn);
+            proc.CommandType = System.Data.CommandType.StoredProcedure;
+            proc.Parameters.Add(new SqlParameter("@hostClub", deleteMatchHostClubTextBox.Text));
+            proc.Parameters.Add(new SqlParameter("@guestClub", deleteMatchGuestClubTextBox.Text));
+            proc.Parameters.Add(new SqlParameter("@startTime", deleteMatchStartTimeTextBox.Text));
+            proc.Parameters.Add(new SqlParameter("@endTime", deleteMatchEndTimeTextBox.Text));
 
+            conn.Open();
+            proc.ExecuteNonQuery();
+            conn.Close();
+            Response.Write("Match deleted successfully, if it existed");
         }
     }
 }

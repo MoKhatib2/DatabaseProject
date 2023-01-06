@@ -41,7 +41,7 @@ namespace WebApp
             conn.Open();
             proc.ExecuteNonQuery();
             conn.Close();
-            Response.Write("Club deleted successfully, if it was available");
+            Response.Write("Club deleted successfully, if it existed");
 
         }
 
@@ -77,7 +77,7 @@ namespace WebApp
             conn.Open();
             proc.ExecuteNonQuery();
             conn.Close();
-            Response.Write("Stadium deleted successfully, if it was available");
+            Response.Write("Stadium deleted successfully, if it existed");
 
         }
 

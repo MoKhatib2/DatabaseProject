@@ -93,6 +93,7 @@
     <Content Include="SAM_Register.aspx" />
     <Content Include="SA_HomePage.aspx" />
     <Content Include="SM_Register.aspx" />
+    <Content Include="StadiumsPage.aspx" />
     <Content Include="StartPage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -207,6 +208,13 @@
     </Compile>
     <Compile Include="stadiumsNeverPlayedOn_Result.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StadiumsPage.aspx.cs">
+      <DependentUpon>StadiumsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StadiumsPage.aspx.designer.cs">
+      <DependentUpon>StadiumsPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="StartPage.aspx.cs">
       <DependentUpon>StartPage.aspx</DependentUpon>
