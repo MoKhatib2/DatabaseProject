@@ -11,7 +11,7 @@ namespace WebApp
 {
 
 
-    public partial class SM_HomePage
+    public partial class SM_HomePage2
     {
 
         /// <summary>
@@ -60,24 +60,6 @@ namespace WebApp
         protected global::System.Web.UI.WebControls.Table ReceivedRequests;
 
         /// <summary>
-        /// Label4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
-
-        /// <summary>
-        /// UnhandeledRequests control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Table UnhandeledRequests;
-
-        /// <summary>
         /// Label3 control.
         /// </summary>
         /// <remarks>
@@ -87,30 +69,12 @@ namespace WebApp
         protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// AcceptOrRejectID control.
+        /// Requests control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AcceptOrRejectID;
-
-        /// <summary>
-        /// AcceptBUTTON control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button AcceptBUTTON;
-
-        /// <summary>
-        /// RejectBUTTON control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button RejectBUTTON;
+        protected global::System.Web.UI.WebControls.GridView Requests;
     }
 }
