@@ -77,6 +77,7 @@
   <ItemGroup>
     <Content Include="CR_HomePage.aspx" />
     <Content Include="CR_Register.aspx" />
+    <Content Include="Fan_HomePage.aspx" />
     <Content Include="Fan_Register.aspx" />
     <Content Include="MainRegister.aspx" />
     <Content Include="Model1.Context.tt">
@@ -92,6 +93,7 @@
     <Content Include="SAM_HomePage.aspx" />
     <Content Include="SAM_Register.aspx" />
     <Content Include="SA_HomePage.aspx" />
+    <Content Include="SM_HomePage.aspx" />
     <Content Include="SM_Register.aspx" />
     <Content Include="StadiumsPage.aspx" />
     <Content Include="StartPage.aspx" />
@@ -132,6 +134,13 @@
     </Compile>
     <Compile Include="Fan.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fan_HomePage.aspx.cs">
+      <DependentUpon>Fan_HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fan_HomePage.aspx.designer.cs">
+      <DependentUpon>Fan_HomePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Fan_Register.aspx.cs">
       <DependentUpon>Fan_Register.aspx</DependentUpon>
@@ -189,6 +198,13 @@
     </Compile>
     <Compile Include="SA_HomePage.aspx.designer.cs">
       <DependentUpon>SA_HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SM_HomePage.aspx.cs">
+      <DependentUpon>SM_HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SM_HomePage.aspx.designer.cs">
+      <DependentUpon>SM_HomePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="SM_Register.aspx.cs">
       <DependentUpon>SM_Register.aspx</DependentUpon>

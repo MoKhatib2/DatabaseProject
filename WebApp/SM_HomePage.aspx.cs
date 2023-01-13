@@ -108,7 +108,7 @@ namespace WebApp
                 proc.Parameters.Add(new SqlParameter("@stadMUsername", StadiumManager));
                 proc.Parameters.Add(new SqlParameter("@hostClub", HostClub));
                 proc.Parameters.Add(new SqlParameter("@guestClub", GuestClub));
-                proc.Parameters.Add(new SqlParameter("@StartTime", StartTime));
+                proc.Parameters.Add(new SqlParameter("@startTime", DateTime.Parse(StartTime).ToString("yyyy-MM-dd HH:mm:ss")));
 
                 Response.Write("Success?");
                 conn.Open();
